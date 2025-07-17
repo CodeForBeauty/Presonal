@@ -3,7 +3,7 @@ import type { CSSProperties } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import PropTypes from 'prop-types'
 
-const Header = (props: { onToggleDark: () => void; isDark: any }) => {
+const Header = (props: { onToggleDark: () => void; isDark: boolean }) => {
   const style: CSSProperties = {
     padding: '10px',
   }
