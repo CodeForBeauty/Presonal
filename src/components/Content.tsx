@@ -13,7 +13,6 @@ const Content = () => {
     backgroundColor: 'white',
   }
 
-  
   const match = useMatch('/project/:id')
   const project = projects[match ? Number(match.params.id) : 0]
 
@@ -23,7 +22,16 @@ const Content = () => {
         <Route path='/' element={<About />} />
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/project/:id' element={<Project name={project.name} desc={project.description} media={project.media} />} />
+        <Route
+          path='/project/:id'
+          element={
+            <Project
+              name={project.name}
+              desc={project.moreDesc}
+              media={project.media}
+            />
+          }
+        />
       </Routes>
     </div>
   )

@@ -35,16 +35,23 @@ const Portfolio = () => {
   }
   return (
     <Container style={style}>
+      <h4 className='text-center'>
+        This website is also part of my portfolio. It is built with React and
+        TypeScript. <br />
+        <a target='_blank' href='https://github.com/CodeForBeauty/Presonal'>Github</a>
+      </h4>
       {projects.map((project, index) => {
         project = projects[projects.length - 1 - index]
-        return <PortfolioProject
-          key={project.id}
-          name={project.name}
-          desc={project.description}
-          media={project.media}
-          id={project.id}
-        />
-    })}
+        return (
+          <PortfolioProject
+            key={project.id}
+            name={project.name}
+            desc={project.description}
+            media={project.media}
+            id={project.id}
+          />
+        )
+      })}
     </Container>
   )
 }
