@@ -8,18 +8,21 @@ const Project = (props: {
 }) => {
   const imageStyle: CSSProperties = {
     display: 'block',
-    height: '50rem',
+    width: '80%',
     margin: 'auto',
   }
   return (
     <Container>
-      <Carousel interval={null} style={{ height: '50rem' }}>
+      <Carousel
+        interval={null}
+        style={{ width: '100%', height: 'fit-content' }}
+      >
         {props.media.map((file) => {
           return (
-            <Carousel.Item key={file} style={{ height: '50rem' }}>
+            <Carousel.Item key={file} style={{ width: '100%' }}>
               {file.endsWith('.mp4') ? (
-                <video controls>
-                  <source src={file} style={imageStyle} />
+                <video controls style={imageStyle}>
+                  <source src={file} />
                 </video>
               ) : (
                 <Image src={file} style={imageStyle} />

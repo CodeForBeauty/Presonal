@@ -11,9 +11,11 @@ const PortfolioProject = (props: {
   id: number
 }) => {
   const style: CSSProperties = {
-    width: '60rem',
-    height: '80rem',
-    margin: '3rem',
+    width: '80%',
+    height: 'fit-content',
+    margin: 'auto',
+    marginTop: '5rem',
+    padding: '1rem'
   }
   return (
     <Card style={style}>
