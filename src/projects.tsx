@@ -99,4 +99,62 @@ export const projects: Project[] = [
       </div>
     ),
   },
+  {
+    id: 5,
+    name: 'Todo React Native App',
+    description: 'React native app for task management.',
+    media: [
+      '/TodoApp/EmptyView.png',
+      '/TodoApp/AddView.png',
+      '/TodoApp/MainView.png',
+    ],
+    moreDesc: (
+      <div>
+        React native app for task management.
+        <br />
+        <a target='_bank' href='https://github.com/CodeForBeauty/TodoApp'>
+          Github
+        </a>
+      </div>
+    ),
+  },
+  {
+    id: 6,
+    name: 'Daily question',
+    description: 'Web app, asking question a day.',
+    media: [
+      '/DailyQuestion/Login.png',
+      '/DailyQuestion/EmptyView.png',
+      '/DailyQuestion/AnswerForm.png',
+      '/DailyQuestion/MainView.png',
+    ],
+    moreDesc: (
+      <div>
+        React website asking unique qestion every day. With backend on Express.js and database on Turso
+        <br />
+        <a target='_bank' href='https://github.com/CodeForBeauty/DailyQuestion'>
+          Github
+        </a>
+      </div>
+    ),
+  },
+  {
+    id: 7,
+    name: 'Timeline of me',
+    description: 'Web app, for documenting life events.',
+    media: [
+      '/TimelineOfMe/AddForm.png',
+      '/TimelineOfMe/MainView.png',
+      '/TimelineOfMe/Showcase.mp4',
+    ],
+    moreDesc: (
+      <div>
+        React website for capturing and viewing life events.
+        <br />
+        <a target='_bank' href='https://github.com/CodeForBeauty/LifeTimeline'>
+          Github
+        </a>
+      </div>
+    ),
+  },
 ]

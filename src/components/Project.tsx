@@ -31,7 +31,9 @@ const Project = (props: {
           )
         })}
       </Carousel>
-      <Container>{props.desc}</Container>
+      <Container>
+        <h4 style={{padding: '1rem', margin: '0.5rem'}} className='bg-body-secondary'>{props.desc}</h4>
+      </Container>
     </Container>
   )
 }

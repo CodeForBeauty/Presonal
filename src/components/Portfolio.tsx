@@ -11,11 +11,11 @@ const PortfolioProject = (props: {
   id: number
 }) => {
   const style: CSSProperties = {
-    width: '80%',
+    width: '24rem',
     height: 'fit-content',
     margin: 'auto',
-    marginTop: '5rem',
-    padding: '1rem'
+    marginTop: '2rem',
+    padding: '1rem',
   }
   return (
     <Card style={style}>
@@ -33,28 +33,37 @@ const PortfolioProject = (props: {
 const Portfolio = () => {
   const style: CSSProperties = {
     display: 'grid',
+    width: '100vw',
+    maxWidth: '100vw',
     justifyContent: 'center',
+    gridTemplateColumns: 'repeat(auto-fill, 24rem)',
+    gap: '4rem',
   }
   return (
-    <Container style={style}>
+    <>
+      <Container style={style}>
+        {projects.map((project, index) => {
+          project = projects[projects.length - 1 - index]
+          return (
+            <PortfolioProject
+              key={project.id}
+              name={project.name}
+              desc={project.description}
+              media={project.media}
+              id={project.id}
+            />
+          )
+        })}
+      </Container>
+      <br />
       <h4 className='text-center'>
         This website is also part of my portfolio. It is built with React and
         TypeScript. <br />
-        <a target='_blank' href='https://github.com/CodeForBeauty/Presonal'>Github</a>
+        <a target='_blank' href='https://github.com/CodeForBeauty/Presonal'>
+          Github
+        </a>
       </h4>
-      {projects.map((project, index) => {
-        project = projects[projects.length - 1 - index]
-        return (
-          <PortfolioProject
-            key={project.id}
-            name={project.name}
-            desc={project.description}
-            media={project.media}
-            id={project.id}
-          />
-        )
-      })}
-    </Container>
+    </>
   )
 }
 
