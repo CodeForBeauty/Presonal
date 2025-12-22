@@ -9,19 +9,14 @@ const Header = (props: { onToggleDark: () => void; isDark: boolean }) => {
   }
   return (
     <header>
-      <Navbar className='bg-body-secondary'>
-        <LinkContainer to='/' style={style}>
-          <NavLink>
-            <span>About me</span>
-          </NavLink>
-        </LinkContainer>
+      <Navbar className='bg-body-secondary' style={style}>
         <LinkContainer to='/portfolio' style={style}>
           <NavLink>Portfolio</NavLink>
         </LinkContainer>
         <LinkContainer to='/contact' style={style}>
           <NavLink>Contact</NavLink>
         </LinkContainer>
-        <Button onClick={props.onToggleDark}>
+        <Button onClick={props.onToggleDark} style={{marginLeft: 'auto'}}>
           {props.isDark ? 'light' : 'dark'}
         </Button>
       </Navbar>

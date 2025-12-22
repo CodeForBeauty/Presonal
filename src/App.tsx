@@ -8,7 +8,10 @@ function App() {
   const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
-    setIsDark(window.localStorage.getItem('dark') === 'true')
+    const tmp = window.localStorage.getItem('dark')
+    if (tmp !== null) {
+      setIsDark(tmp === 'true')
+    }
   }, [])
 
   const style: CSSProperties = {

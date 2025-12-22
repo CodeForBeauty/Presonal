@@ -1,11 +1,27 @@
 import type { JSX } from 'react'
 
+const projectFields = {
+  Unity: 0,
+  Cpp: 1,
+  Webdev: 2,
+  Mobile: 3,
+}
+export const fieldsList = [
+  'Unity',
+  'Cpp',
+  'Webdev',
+  'Mobile',
+  'All',
+]
+
 interface Project {
   id: number
   name: string
   description: string
   media: string[]
+  workedOn: string[]
   moreDesc: JSX.Element
+  field: number
 }
 export const projects: Project[] = [
   {
@@ -21,6 +37,8 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Cpp,
   },
   {
     id: 1,
@@ -36,6 +54,8 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Cpp,
   },
   {
     id: 2,
@@ -54,6 +74,8 @@ export const projects: Project[] = [
         was made in Unity.
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Unity,
   },
   {
     id: 3,
@@ -75,6 +97,8 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Cpp,
   },
   {
     id: 4,
@@ -98,6 +122,8 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Webdev,
   },
   {
     id: 5,
@@ -117,6 +143,8 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Mobile,
   },
   {
     id: 6,
@@ -137,6 +165,8 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Webdev,
   },
   {
     id: 7,
@@ -156,5 +186,7 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
+    workedOn: [''],
+    field: projectFields.Webdev,
   },
 ]

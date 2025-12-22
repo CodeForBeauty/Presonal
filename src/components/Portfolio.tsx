@@ -1,7 +1,7 @@
-import { Container } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 import { Card } from 'react-bootstrap'
-import { projects } from '../projects'
-import type { CSSProperties } from 'react'
+import { projects, fieldsList } from '../projects'
+import { useState, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 
 const PortfolioProject = (props: {
@@ -30,39 +30,76 @@ const PortfolioProject = (props: {
   )
 }
 
+const FieldBtn = (props: {
+  text: string
+  selected: boolean
+  onClick: () => void
+}) => {
+  const style: CSSProperties = {
+    margin: '5px',
+  }
+
+  return (
+    <Button
+      active={props.selected}
+      onClick={props.onClick}
+      style={style}
+      variant='secondary'
+    >
+      {props.text}
+    </Button>
+  )
+}
+
 const Portfolio = () => {
+  const [field, setField] = useState('All')
+
   const style: CSSProperties = {
     display: 'grid',
-    width: '100vw',
+    width: '95vw',
     maxWidth: '100vw',
     justifyContent: 'center',
     gridTemplateColumns: 'repeat(auto-fill, 24rem)',
     gap: '4rem',
   }
+
   return (
     <>
-      <Container style={style}>
-        {projects.map((project, index) => {
-          project = projects[projects.length - 1 - index]
+      <Container
+        style={{
+          display: 'flex',
+          width: '100vw',
+          justifyContent: 'center',
+          marginTop: '10px',
+        }}
+      >
+        {fieldsList.map((el, index) => {
           return (
-            <PortfolioProject
-              key={project.id}
-              name={project.name}
-              desc={project.description}
-              media={project.media}
-              id={project.id}
+            <FieldBtn
+              text={el}
+              selected={el === field}
+              key={index}
+              onClick={() => setField(el)}
             />
           )
         })}
       </Container>
-      <br />
-      <h4 className='text-center'>
-        This website is also part of my portfolio. It is built with React and
-        TypeScript. <br />
-        <a target='_blank' href='https://github.com/CodeForBeauty/Presonal'>
-          Github
-        </a>
-      </h4>
+      <Container style={style}>
+        {projects
+          .filter((el) => field === 'All' || fieldsList[el.field] == field)
+          .map((project) => {
+            //project = projects[projects.length - 1 - index]
+            return (
+              <PortfolioProject
+                key={project.id}
+                name={project.name}
+                desc={project.description}
+                media={project.media}
+                id={project.id}
+              />
+            )
+          })}
+      </Container>
     </>
   )
 }
