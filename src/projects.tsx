@@ -8,7 +8,7 @@ const projectFields = {
 }
 export const fieldsList = [
   'Unity',
-  'Cpp',
+  'C++',
   'Webdev',
   'Mobile',
   'All',
@@ -32,12 +32,13 @@ export const projects: Project[] = [
     moreDesc: (
       <div>
         Interactive falling sand simulation made with C++ and OpenGL. <br />
+        All of the simulation is done on CPU. <br />
         <a target='_bank' href='https://github.com/CodeForBeauty/FallingSand'>
           Github
         </a>
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['OpenGL', 'C++'],
     field: projectFields.Cpp,
   },
   {
@@ -54,7 +55,7 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['OpenGL', 'C++'],
     field: projectFields.Cpp,
   },
   {
@@ -71,10 +72,10 @@ export const projects: Project[] = [
       <div>
         Online multiplayer game adaptation of a board game. The server is
         written from scratch using .NET and tcp/websocket connection. The client
-        was made in Unity.
+        was made in Unity. SQLite is used as database to store account info.
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['Multiplayer', 'C#', 'Custom server'],
     field: projectFields.Unity,
   },
   {
@@ -90,14 +91,14 @@ export const projects: Project[] = [
     moreDesc: (
       <div>
         Game made from scratch with use of OpenGL. Physics simulation from
-        scratch, PBR materials, dynamic shadows, skybox lighting, skeletal
-        animation. <br />
+        scratch, PBR materials, dynamic shadows, skybox lighting, skinned meshes, 
+        skeletal animation. <br />
         <a target='_bank' href='https://github.com/CodeForBeauty/AstronautGame'>
           Github
         </a>
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['OpenGL', '3D Engine', 'Physics Engine', 'Library design'],
     field: projectFields.Cpp,
   },
   {
@@ -111,7 +112,7 @@ export const projects: Project[] = [
     ],
     moreDesc: (
       <div>
-        Web app, catalogue of indie games. React app with database on Supabase.{' '}
+        Web app, catalogue of indie games. React app with database on Supabase. The games are scraped from steam.
         <br />
         <a target='_bank' href='https://indiecrate.netlify.app'>
           Deployed
@@ -122,7 +123,7 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['React'],
     field: projectFields.Webdev,
   },
   {
@@ -143,7 +144,7 @@ export const projects: Project[] = [
         </a>
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['React Native'],
     field: projectFields.Mobile,
   },
   {
@@ -158,14 +159,14 @@ export const projects: Project[] = [
     ],
     moreDesc: (
       <div>
-        React website asking unique qestion every day. With backend on Express.js and database on Turso
+        React website asking unique qestion every day. With backend on Express.js and database on Turso.
         <br />
         <a target='_bank' href='https://github.com/CodeForBeauty/DailyQuestion'>
           Github
         </a>
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['React', 'Express'],
     field: projectFields.Webdev,
   },
   {
@@ -179,14 +180,82 @@ export const projects: Project[] = [
     ],
     moreDesc: (
       <div>
-        React website for capturing and viewing life events.
+        React website for capturing and viewing life events. With backend on Nest.js and database on PostgreSQL. And Docker setup.
         <br />
         <a target='_bank' href='https://github.com/CodeForBeauty/LifeTimeline'>
           Github
         </a>
       </div>
     ),
-    workedOn: [''],
+    workedOn: ['React', 'Nest.js', 'PostgreSQL'],
     field: projectFields.Webdev,
+  },
+  {
+    id: 8,
+    name: 'Dragon March',
+    description: 'Mobile game.',
+    media: [
+      '/DragonMarch/Gameplay1.png',
+      '/DragonMarch/Menu.png',
+      '/DragonMarch/Gameplay2.png',
+    ],
+    moreDesc: (
+      <div>
+        Simple mobile game made with Unity.
+      </div>
+    ),
+    workedOn: ['Unity', 'Mobile'],
+    field: projectFields.Unity,
+  },
+  {
+    id: 9,
+    name: 'Bar',
+    description: 'Mobile game.',
+    media: [
+      '/BarGame/Gameplay1.png',
+      '/BarGame/Gameplay2.png',
+      '/BarGame/Overview.png',
+    ],
+    moreDesc: (
+      <div>
+        Simple mobile game made with Unity.
+      </div>
+    ),
+    workedOn: ['Unity', 'Mobile'],
+    field: projectFields.Unity,
+  },
+  {
+    id: 10,
+    name: 'Echo Drift',
+    description: 'Web game.',
+    media: [
+      '/EchoDrift/Gameplay1.png',
+      '/EchoDrift/Menu.png',
+      '/EchoDrift/Gameplay2.png',
+    ],
+    moreDesc: (
+      <div>
+        Simple web game made with Unity.
+      </div>
+    ),
+    workedOn: ['Unity', 'Webgame'],
+    field: projectFields.Unity,
+  },
+  {
+    id: 11,
+    name: 'Super Ping Pong Remake',
+    description: 'Crossplatform game.',
+    media: [
+      '/PingPong/Gameplay.png',
+      '/PingPong/Menu.png',
+      '/PingPong/Overview.mp4',
+    ],
+    moreDesc: (
+      <div>
+        Super Ping Pong Sega remake with Unity.
+      </div>
+    ),
+    workedOn: ['Unity'],
+    field: projectFields.Unity,
   },
 ]

@@ -9,7 +9,6 @@ const Content = () => {
   const style: CSSProperties = {
     minHeight: '50vh',
     flexGrow: 1,
-    backgroundColor: 'white',
   }
 
   const match = useMatch('/project/:id')
@@ -31,6 +30,7 @@ const Content = () => {
               name={project.name}
               desc={project.moreDesc}
               media={project.media}
+              workedOn={project.workedOn}
             />
           }
         />
