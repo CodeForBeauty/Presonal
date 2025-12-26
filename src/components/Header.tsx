@@ -10,6 +10,9 @@ const Header = (props: { onToggleDark: () => void; isDark: boolean }) => {
   return (
     <header>
       <Navbar className='bg-body-secondary' style={style}>
+        <LinkContainer to='/about' style={style}>
+          <NavLink>About</NavLink>
+        </LinkContainer>
         <LinkContainer to='/portfolio' style={style}>
           <NavLink>Portfolio</NavLink>
         </LinkContainer>

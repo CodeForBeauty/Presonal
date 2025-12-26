@@ -1,23 +1,43 @@
 import { Container } from 'react-bootstrap'
 import type { CSSProperties } from 'react'
 
+const Skill = ({name} : {name: string}) => {
+  const style: CSSProperties = {
+    padding: '10px',
+    width: 'fit-content',
+    borderRadius: '10px',
+    margin: '5px',
+  }
+  return <span className='bg-body-tertiary' style={style}>{name}</span>
+}
+
 const About = () => {
   const style: CSSProperties = {
     padding: '2rem',
+    marginTop: '2rem',
   }
   return (
-    <Container style={style}>
-      <h2 className='text-center'>About me</h2>
-      <Container className='text-center'>
+    <Container style={style} className='bg-body-secondary' >
+      <h2 style={{paddingLeft: '1rem'}} >Nursultan Mamatov</h2>
+      <Container>
         <p>
-          Hello everyone! I'm Nursultan. Web developer transitioning from game
-          development.
+          An ambitious Kyrgyzstan-based freelancer with 4 years of experience, specializing in game development.
         </p>
         <p>
-          With my experience working on low level systems I bring unique
-          skillset.
+          Have experience working on a wide variety of project sizes. By delivering and shipping full games and websites.
         </p>
       </Container>
+      <h4 style={{paddingLeft: '1rem'}}>Skills:</h4>
+      <div style={{display: 'flex', flexDirection: 'row'}} >
+        <Skill name='C++' />
+        <Skill name='Unity' />
+        <Skill name='C#' />
+        <Skill name='Unreal Engine' />
+        <Skill name='Node.js' />
+        <Skill name='React' />
+        <Skill name='Nest.js' />
+        <Skill name='PostgreSQL' />
+      </div>
     </Container>
   )
 }

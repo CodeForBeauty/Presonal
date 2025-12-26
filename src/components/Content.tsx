@@ -4,6 +4,7 @@ import Portfolio from './Portfolio'
 import Contact from './Contact'
 import Project from './Project'
 import { projects } from '../projects'
+import About from './About'
 
 const Content = () => {
   const style: CSSProperties = {
@@ -34,6 +35,7 @@ const Content = () => {
             />
           }
         />
+        <Route path='/about' element={<About />} />
       </Routes>
     </div>
   )
