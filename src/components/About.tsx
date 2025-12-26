@@ -28,7 +28,7 @@ const About = () => {
         </p>
       </Container>
       <h4 style={{paddingLeft: '1rem'}}>Skills:</h4>
-      <div style={{display: 'flex', flexDirection: 'row'}} >
+      <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
         <Skill name='C++' />
         <Skill name='Unity' />
         <Skill name='C#' />
