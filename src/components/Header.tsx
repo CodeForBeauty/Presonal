@@ -1,6 +1,5 @@
-import { Navbar, NavLink, Button } from 'react-bootstrap'
+import { Navbar, Button } from 'react-bootstrap'
 import type { CSSProperties } from 'react'
-import { LinkContainer } from 'react-router-bootstrap'
 import PropTypes from 'prop-types'
 
 const Header = (props: { onToggleDark: () => void; isDark: boolean }) => {
@@ -10,15 +9,6 @@ const Header = (props: { onToggleDark: () => void; isDark: boolean }) => {
   return (
     <header>
       <Navbar className='bg-body-secondary' style={style}>
-        <LinkContainer to='/about' style={style}>
-          <NavLink>About</NavLink>
-        </LinkContainer>
-        <LinkContainer to='/portfolio' style={style}>
-          <NavLink>Portfolio</NavLink>
-        </LinkContainer>
-        <LinkContainer to='/contact' style={style}>
-          <NavLink>Contact</NavLink>
-        </LinkContainer>
         <Button onClick={props.onToggleDark} style={{marginLeft: 'auto'}}>
           {props.isDark ? 'light' : 'dark'}
         </Button>

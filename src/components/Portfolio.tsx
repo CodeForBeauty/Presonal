@@ -73,6 +73,7 @@ const Portfolio = () => {
 
   return (
     <>
+      <h2 className='text-center' style={{marginTop: '2rem'}}>Portfolio</h2>
       <Container
         style={{
           display: 'flex',

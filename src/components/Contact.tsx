@@ -8,6 +8,9 @@ const Contact = () => {
 
   return (
     <Container style={style} className='text-center'>
+      <h3>
+        Contact me: 
+      </h3>
       <span>
         <img src='emailLogo.png' style={{width: '2rem', margin: '10px'}} />
         Email:{' '}

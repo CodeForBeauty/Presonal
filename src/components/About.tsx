@@ -18,13 +18,13 @@ const About = () => {
   }
   return (
     <Container style={style} className='bg-body-secondary' >
-      <h2 style={{paddingLeft: '1rem'}} >Nursultan Mamatov</h2>
+      <h1 style={{paddingLeft: '1rem'}} >Nursultan Mamatov</h1>
       <Container>
         <p>
           An ambitious Kyrgyzstan-based freelancer with 4 years of experience, specializing in game development.
         </p>
         <p>
-          Have experience working on a wide variety of project sizes. By delivering and shipping full games and websites.
+          Have experience working on a wide variety of project sizes. Delivering and shipping full games and websites.
         </p>
       </Container>
       <h4 style={{paddingLeft: '1rem'}}>Skills:</h4>

@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { Routes, Route, useMatch, Navigate } from 'react-router-dom'
+import { Routes, Route, useMatch } from 'react-router-dom'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
 import Project from './Project'
@@ -18,12 +18,16 @@ const Content = () => {
   return (
     <div style={style} className='bg-body-tertiary bg-color-white'>
       <Routes>
-        <Route path='/' element={<Navigate to='/portfolio' />} />
         <Route
-          path='/portfolio'
-          element={<Portfolio />}
+          path='/'
+          element={
+            <div>
+              <About />
+              <Portfolio />
+              <Contact />
+            </div>
+          }
         />
-        <Route path='/contact' element={<Contact />} />
         <Route
           path='/project/:id'
           element={
@@ -35,7 +39,6 @@ const Content = () => {
             />
           }
         />
-        <Route path='/about' element={<About />} />
       </Routes>
     </div>
   )
