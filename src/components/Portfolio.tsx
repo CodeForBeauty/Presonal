@@ -74,6 +74,25 @@ const Portfolio = () => {
   return (
     <>
       <h2 className='text-center' style={{marginTop: '2rem'}}>Portfolio</h2>
+      <Container className='bg-body-secondary' style={{marginTop: "2rem", padding: 0, width: "fit-content", maxWidth: "100vw"}}>
+        <h2 style={{justifySelf: "center"}} >Highlight</h2>
+        <Container style={{display: "flex", flexWrap: "wrap", gap: "4rem", width: "fit-content", maxWidth: "95vw", justifyContent: "center"}}>
+          {projects
+            .filter((el) => el.isHighlight)
+            .map((project) => {
+              return (
+                <PortfolioProject
+                key={project.id}
+                name={project.name}
+                desc={project.description}
+                media={project.media}
+                id={project.id}
+                workedOn={project.workedOn}
+                />
+              )
+            })}
+        </Container>
+      </Container>
       <Container
         style={{
           display: 'flex',
@@ -92,25 +111,6 @@ const Portfolio = () => {
             />
           )
         })}
-      </Container>
-      <Container className='bg-body-secondary' style={{padding: "2rem", marginTop: "2rem"}}>
-        <h2 style={{justifySelf: "center"}} >Highlight</h2>
-        <Container style={style}>
-          {projects
-            .filter((el) => el.isHighlight)
-            .map((project) => {
-              return (
-                <PortfolioProject
-                key={project.id}
-                name={project.name}
-                desc={project.description}
-                media={project.media}
-                id={project.id}
-                workedOn={project.workedOn}
-                />
-              )
-            })}
-        </Container>
       </Container>
       <Container style={style}>
         {projects

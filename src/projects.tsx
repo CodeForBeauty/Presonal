@@ -265,10 +265,35 @@ export const projects: Project[] = [
     moreDesc: (
       <div>
         Super Ping Pong Sega remake with Unity.
+        <a target='_bank' href='https://durman-himself.itch.io/ping-pong-remake'>
+          Itch.io page
+        </a>
       </div>
     ),
     workedOn: ['Unity'],
     field: projectFields.Unity,
     isHighlight: false,
+  },
+  {
+    id: 12,
+    name: 'Gun Dungeon',
+    description: 'A Web/Android game made with Unity.',
+    media: [
+      '/GunDungeon/Level.png',
+      '/GunDungeon/Menu.png',
+      '/GunDungeon/Boss.png',
+      '/GunDungeon/Start.png',
+    ],
+    moreDesc: (
+      <div>
+        A rogue-like 2D game made with Unity. Containing procedural level generator system, shopping system, endless mode, bosses, gun parts system.
+        <a target='_bank' href='https://durman-himself.itch.io/gun-dungeon'>
+          Itch.io page
+        </a>
+      </div>
+    ),
+    workedOn: ['Unity'],
+    field: projectFields.Unity,
+    isHighlight: true,
   },
 ]
