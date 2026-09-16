@@ -97,7 +97,6 @@ const Portfolio = () => {
         {projects
           .filter((el) => field === 'All' || fieldsList[el.field] == field)
           .map((project) => {
-            //project = projects[projects.length - 1 - index]
             return (
               <PortfolioProject
                 key={project.id}

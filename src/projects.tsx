@@ -1,14 +1,14 @@
 import type { JSX } from 'react'
 
 const projectFields = {
-  Unity: 0,
-  Cpp: 1,
+  Cpp: 0,
+  Unity: 1,
   Webdev: 2,
   Mobile: 3,
 }
 export const fieldsList = [
-  'Unity',
   'C++',
+  'Unity',
   'Webdev',
   'Mobile',
   'All',

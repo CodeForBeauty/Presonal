@@ -25,6 +25,13 @@ const Contact = () => {
           github.com/CodeForBeauty
         </a>
       </span>
+      <span>
+        <img src='linkedinLogo.png' style={{width: '2rem', margin: '10px'}} />
+        LinkedIn:{' '}
+        <a href='https://www.linkedin.com/in/nursultan-mamatov-4b8b3939b' target='_blank'>
+          linkedin.com/in/nursultan-mamatov-4b8b3939b
+        </a>
+      </span>
     </Container>
   )
 }

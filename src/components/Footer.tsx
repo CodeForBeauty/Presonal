@@ -6,7 +6,7 @@ const Footer = () => {
   }
   return (
     <footer style={style} className='bg-body-secondary text-center'>
-      © 2025 Nursultan Mamatov. All rights reserved
+      © 2026 Nursultan Mamatov. All rights reserved
     </footer>
   )
 }

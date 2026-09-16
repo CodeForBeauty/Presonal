@@ -21,23 +21,9 @@ const About = () => {
       <h1 style={{paddingLeft: '1rem'}} >Nursultan Mamatov</h1>
       <Container>
         <p>
-          An ambitious Kyrgyzstan-based freelancer with 4 years of experience, specializing in game development.
-        </p>
-        <p>
-          Have experience working on a wide variety of project sizes. Delivering and shipping full games and websites.
+          C++ Engineer | Backend Engineer
         </p>
       </Container>
-      <h4 style={{paddingLeft: '1rem'}}>Skills:</h4>
-      <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
-        <Skill name='C++' />
-        <Skill name='Unity' />
-        <Skill name='C#' />
-        <Skill name='Unreal Engine' />
-        <Skill name='Node.js' />
-        <Skill name='React' />
-        <Skill name='Nest.js' />
-        <Skill name='PostgreSQL' />
-      </div>
     </Container>
   )
 }
