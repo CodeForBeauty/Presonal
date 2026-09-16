@@ -22,6 +22,7 @@ interface Project {
   workedOn: string[]
   moreDesc: JSX.Element
   field: number
+  isHighlight: boolean
 }
 export const projects: Project[] = [
   {
@@ -40,6 +41,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['OpenGL', 'C++'],
     field: projectFields.Cpp,
+    isHighlight: false,
   },
   {
     id: 1,
@@ -57,6 +59,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['OpenGL', 'C++'],
     field: projectFields.Cpp,
+    isHighlight: false,
   },
   {
     id: 2,
@@ -77,6 +80,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['Multiplayer', 'C#', 'Custom server'],
     field: projectFields.Unity,
+    isHighlight: true,
   },
   {
     id: 3,
@@ -100,6 +104,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['OpenGL', '3D Engine', 'Physics Engine', 'Library design'],
     field: projectFields.Cpp,
+    isHighlight: true,
   },
   {
     id: 4,
@@ -125,6 +130,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['React'],
     field: projectFields.Webdev,
+    isHighlight: false,
   },
   {
     id: 5,
@@ -146,6 +152,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['React Native'],
     field: projectFields.Mobile,
+    isHighlight: false,
   },
   {
     id: 6,
@@ -168,6 +175,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['React', 'Express'],
     field: projectFields.Webdev,
+    isHighlight: false,
   },
   {
     id: 7,
@@ -189,6 +197,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['React', 'Nest.js', 'PostgreSQL'],
     field: projectFields.Webdev,
+    isHighlight: false,
   },
   {
     id: 8,
@@ -206,6 +215,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['Unity', 'Mobile'],
     field: projectFields.Unity,
+    isHighlight: false,
   },
   {
     id: 9,
@@ -223,6 +233,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['Unity', 'Mobile'],
     field: projectFields.Unity,
+    isHighlight: false,
   },
   {
     id: 10,
@@ -240,6 +251,7 @@ export const projects: Project[] = [
     ),
     workedOn: ['Unity', 'Webgame'],
     field: projectFields.Unity,
+    isHighlight: false,
   },
   {
     id: 11,
@@ -257,5 +269,6 @@ export const projects: Project[] = [
     ),
     workedOn: ['Unity'],
     field: projectFields.Unity,
+    isHighlight: false,
   },
 ]

@@ -93,6 +93,25 @@ const Portfolio = () => {
           )
         })}
       </Container>
+      <Container className='bg-body-secondary' style={{padding: "2rem", marginTop: "2rem"}}>
+        <h2 style={{justifySelf: "center"}} >Highlight</h2>
+        <Container style={style}>
+          {projects
+            .filter((el) => el.isHighlight)
+            .map((project) => {
+              return (
+                <PortfolioProject
+                key={project.id}
+                name={project.name}
+                desc={project.description}
+                media={project.media}
+                id={project.id}
+                workedOn={project.workedOn}
+                />
+              )
+            })}
+        </Container>
+      </Container>
       <Container style={style}>
         {projects
           .filter((el) => field === 'All' || fieldsList[el.field] == field)
