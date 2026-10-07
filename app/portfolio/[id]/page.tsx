@@ -9,8 +9,6 @@ export default async function Portfolio({
 }) {
   const { id } = await params
 
-  console.log(id)
-
   const portfolios: PortfolioType[] = await getPortfolios()
 
   const project = portfolios.find((p) => p.id == id)
@@ -42,6 +40,20 @@ export default async function Portfolio({
         {project.skills.map((skill, id) => {
           return <div key={id}>{skill}</div>
         })}
+        {project.links.length > 0 && (
+          <div>
+            <p>Links</p>
+            <div>
+              {project.links.map((link) => {
+                return (
+                  <a href={link} key={link}>
+                    {link}
+                  </a>
+                )
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

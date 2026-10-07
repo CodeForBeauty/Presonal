@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function PortfolioProject({ project }: { project: PortfolioType }) {
-  console.log(project)
   return (
     <Link href={`/portfolio/${project.id}`}>
       <div className='bg-gray-800'>
@@ -33,12 +32,6 @@ export default async function Portfolio() {
         className='grid gap-4'
         style={{ gridTemplateColumns: 'repeat(auto-fill, 24rem)' }}
       >
-        {portfolios.map((d) => {
-          return <PortfolioProject project={d} key={d.id} />
-        })}
-        {portfolios.map((d) => {
-          return <PortfolioProject project={d} key={d.id} />
-        })}
         {portfolios.map((d) => {
           return <PortfolioProject project={d} key={d.id} />
         })}

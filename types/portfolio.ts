@@ -6,6 +6,6 @@ export type PortfolioType = {
   skills: string[]
   images: { url: string }[]
   thumbnail: { url: string }
-  links: string
+  links: string[]
   type: 'cpp' | 'unity' | 'webDevelopment'
 }

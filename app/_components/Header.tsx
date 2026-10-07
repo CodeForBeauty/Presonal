@@ -7,6 +7,12 @@ const Header = () => {
         <Link href='/'>
           <button>Main</button>
         </Link>
+        <Link href='/portfolio'>
+          <button>Portfolio</button>
+        </Link>
+        <Link href='/projects'>
+          <button>Client Projects</button>
+        </Link>
       </nav>
       <button>{true ? 'light' : 'dark'}</button>
     </header>
