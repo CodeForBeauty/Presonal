@@ -1,9 +1,11 @@
 export type PortfolioType = {
-  id: number
+  id: string
   title: string
+  brief: string
   description: string
   skills: string[]
-  images: string[]
-  links: { url: string }[]
+  images: { url: string }[]
+  thumbnail: { url: string }
+  links: string
   type: 'cpp' | 'unity' | 'webDevelopment'
 }
