@@ -2,50 +2,51 @@ import Image from 'next/image'
 
 const Contact = () => {
   return (
-    <div className='text-center p-2'>
-      <h3>Contact me:</h3>
-      <span>
-        <Image
-          src='/emailLogo.png'
-          alt='Email logo'
-          width={1}
-          height={1}
-          style={{ width: '2rem', margin: '10px' }}
-        />
-        Email:{' '}
+    <div className='flex flex-col justify-center items-center'>
+      <h3>Links:</h3>
+      <div className='flex text-center gap-4 p-2 overflow-auto flex-wrap'>
         <a href='mailto:nursultanmamatov@proton.me'>
-          nursultanmamatov@proton.me
+          <div className='flex'>
+            <Image
+              src='/emailLogo.png'
+              alt='Email logo'
+              width={1}
+              height={1}
+              style={{ width: '2rem', margin: '10px' }}
+            />
+            <p className='content-center'>Email: nursultanmamatov@proton.me</p>
+          </div>
         </a>
-      </span>
-      <span>
-        <Image
-          src='/githubLogo.png'
-          alt='Github logo'
-          width={1}
-          height={1}
-          style={{ width: '2rem', margin: '10px' }}
-        />
-        Github:{' '}
         <a href='https://github.com/CodeForBeauty' target='_blank'>
-          github.com/CodeForBeauty
+          <div className='flex'>
+            <Image
+              src='/githubLogo.png'
+              alt='Github logo'
+              width={1}
+              height={1}
+              style={{ width: '2rem', margin: '10px' }}
+            />
+            <p className='content-center'>Github: github.com/CodeForBeauty</p>
+          </div>
         </a>
-      </span>
-      <span>
-        <Image
-          src='/linkedinLogo.png'
-          alt='LinkedIn logo'
-          width={1}
-          height={1}
-          style={{ width: '2rem', margin: '10px' }}
-        />
-        LinkedIn:{' '}
         <a
           href='https://www.linkedin.com/in/nursultan-mamatov-4b8b3939b'
           target='_blank'
         >
-          linkedin.com/in/nursultan-mamatov-4b8b3939b
+          <div className='flex'>
+            <Image
+              src='/linkedinLogo.png'
+              alt='LinkedIn logo'
+              width={1}
+              height={1}
+              style={{ width: '2rem', margin: '10px' }}
+            />
+            <p className='content-center'>
+              LinkedIn: linkedin.com/in/nursultan-mamatov-4b8b3939b
+            </p>
+          </div>
         </a>
-      </span>
+      </div>
     </div>
   )
 }

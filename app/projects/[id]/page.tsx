@@ -50,7 +50,7 @@ export default async function Portfolio({
             <div>
               {project.links.map((link) => {
                 return (
-                  <a href={link} key={link}>
+                  <a href={link} key={link} target='_blank'>
                     {link}
                   </a>
                 )
