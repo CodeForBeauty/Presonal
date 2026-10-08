@@ -13,6 +13,9 @@ const Header = () => {
         <Link href='/projects'>
           <button>Client Projects</button>
         </Link>
+        <Link href='/services'>
+          <button>Services</button>
+        </Link>
       </nav>
       <button>{true ? 'light' : 'dark'}</button>
     </header>
