@@ -4,9 +4,9 @@ function Service({ service }: { service: ServiceType }) {
   return (
     <div>
       <div>{service.title}</div>
-      <div>{service.deliverable}</div>
-      <div>{service.price}</div>
-      <div>{service.duration}</div>
+      <div>Deliverable: {service.deliverable}</div>
+      <div>Budget: {service.price}</div>
+      <div>Deadline: {service.duration}</div>
     </div>
   )
 }
