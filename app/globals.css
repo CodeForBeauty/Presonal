@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(2rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+:root {
+  --primary-fg: #0099fa;
+  --secondary-fg: #34e7b7;
+  --primary-bg: #d7f3ff;
+  --secondary-bg: #effaff;
+  --tertiary-bg: #e6f4f1;
+  --text-fg: #000000;
+  --text-inv: #ffffff;
+}
+
+@theme inline {
+  --color-primary: var(--primary-fg);
+  --color-secondary: var(--secondary-fg);
+  --color-primary-bg: var(--primary-bg);
+  --color-secondary-bg: var(--secondary-bg);
+  --color-tertiary-bg: var(--tertiary-bg);
+  --color-text-fg: var(--text-fg);
+  --color-text-inv: var(--text-inv);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-fg: #0099fa;
+    --secondary-fg: #34e7b7;
+    --primary-bg: #3f4f55;
+    --secondary-bg: #1d1f20;
+    --tertiary-bg: #3a3f3d;
+    --text-fg: #ffffff;
+    --text-inv: #000000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 50ms !important;
+    transition-duration: 50ms !important;
+  }
+}
+
+body {
+  background: var(--secondary-bg);
+  color: var(--text-fg);
+}
+
+button {
+  cursor: pointer;
+}
+
+.animate-in {
+  animation: fadeUp 400ms ease-out both;
+}
