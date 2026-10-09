@@ -1,39 +1,19 @@
 import { ProjectType } from '@/types/project'
 import { getProjects } from '@/utils/projects'
-import Image from 'next/image'
-import Link from 'next/link'
-
-function ClientProject({ project }: { project: ProjectType }) {
-  return (
-    <Link href={`/projects/${project.id}`}>
-      <div className='bg-gray-800'>
-        <Image
-          src={project.thumbnail.url}
-          alt='Project thumbnail'
-          width={512}
-          height={307}
-          style={{ height: '50%', width: 'auto' }}
-        ></Image>
-        <div>{project.title}</div>
-        <div>{project.brief}</div>
-        <div>{project.type}</div>
-      </div>
-    </Link>
-  )
-}
+import ProjectCard from '../_components/ProjectCard'
 
 export default async function Projects() {
   const projects: ProjectType[] = await getProjects()
 
   return (
-    <div>
-      <h1>Client Projects</h1>
+    <div className='pt-8'>
+      <h1 className='text-2xl text-center'>Client Projects</h1>
       <div
-        className='grid gap-4'
-        style={{ gridTemplateColumns: 'repeat(auto-fill, 24rem)' }}
+        className='grid gap-4 p-4 justify-center'
+        style={{ gridTemplateColumns: 'repeat(auto-fit, 24rem)' }}
       >
         {projects.map((d) => {
-          return <ClientProject project={d} key={d.id} />
+          return <ProjectCard project={d} subfolder='projects' key={d.id} />
         })}
       </div>
     </div>

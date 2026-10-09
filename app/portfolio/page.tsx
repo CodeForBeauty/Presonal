@@ -1,39 +1,19 @@
 import { PortfolioType } from '@/types/portfolio'
 import { getPortfolios } from '@/utils/portfolio'
-import Image from 'next/image'
-import Link from 'next/link'
-
-function PortfolioProject({ project }: { project: PortfolioType }) {
-  return (
-    <Link href={`/portfolio/${project.id}`}>
-      <div className='bg-gray-800'>
-        <Image
-          src={project.thumbnail.url}
-          alt='Project thumbnail'
-          width={512}
-          height={307}
-          style={{ height: '50%', width: 'auto' }}
-        ></Image>
-        <div>{project.title}</div>
-        <div>{project.brief}</div>
-        <div>{project.type}</div>
-      </div>
-    </Link>
-  )
-}
+import ProjectCard from '../_components/ProjectCard'
 
 export default async function Portfolio() {
   const portfolios: PortfolioType[] = await getPortfolios()
 
   return (
-    <div>
-      <h1>Portfolio</h1>
+    <div className='pt-8'>
+      <h1 className='text-2xl text-center'>Portfolio</h1>
       <div
-        className='grid gap-4'
-        style={{ gridTemplateColumns: 'repeat(auto-fill, 24rem)' }}
+        className='grid gap-4 p-4 justify-center'
+        style={{ gridTemplateColumns: 'repeat(auto-fit, 24rem)' }}
       >
         {portfolios.map((d) => {
-          return <PortfolioProject project={d} key={d.id} />
+          return <ProjectCard project={d} subfolder='portfolio' key={d.id} />
         })}
       </div>
     </div>

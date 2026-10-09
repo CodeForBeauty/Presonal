@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const Contact = () => {
   return (
-    <div className='flex flex-col justify-center items-center'>
-      <h3>Links:</h3>
+    <div className='flex flex-col justify-center items-center mt-8'>
+      <h3 className='text-lg'>Links:</h3>
       <div className='flex text-center gap-4 p-2 overflow-auto flex-wrap'>
         <a href='mailto:nursultanmamatov@proton.me'>
           <div className='flex'>

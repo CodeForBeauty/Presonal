@@ -1,6 +1,13 @@
 import { PortfolioType } from '@/types/portfolio'
 import config from './config'
 
+export type HightlightType = {
+  id: string
+  project: PortfolioType & {
+    __typename: string
+  }
+}
+
 export async function getHighlights() {
   const response = await fetch(config.cmsUrl, {
     method: 'POST',
@@ -11,6 +18,7 @@ export async function getHighlights() {
       query: `
       query GetHighlights {
         highlights {
+          id
           project {
             __typename
             ... on Project {
@@ -43,7 +51,7 @@ export async function getHighlights() {
 
   const data = await response.json()
 
-  const highlights: PortfolioType[] = data.data.highlights
+  const highlights: HightlightType[] = data.data.highlights
 
   return highlights
 }
