@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const Contact = () => {
+export default function Contact() {
   return (
     <div className='flex flex-col justify-center items-center mt-8'>
       <h3 className='text-lg'>Links:</h3>
@@ -58,5 +58,3 @@ const Contact = () => {
     </div>
   )
 }
-
-export default Contact

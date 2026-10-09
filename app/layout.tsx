@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import './globals.css'
 import Header from './_components/Header'
 import Footer from './_components/Footer'
 import Contact from './_components/Contact'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Nursultan Mamatov',

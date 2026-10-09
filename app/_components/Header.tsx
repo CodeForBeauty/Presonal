@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const Header = () => {
+export default function Header() {
   return (
     <header className='flex w-[stretch] justify-between p-2 bg-tertiary-bg'>
       <nav className='flex gap-4'>
@@ -17,9 +17,6 @@ const Header = () => {
           <button>Services</button>
         </Link>
       </nav>
-      <button>{true ? 'light' : 'dark'}</button>
     </header>
   )
 }
-
-export default Header

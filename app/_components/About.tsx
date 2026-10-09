@@ -1,7 +1,7 @@
-const About = () => {
+export default function About() {
   return (
     <div className='flex flex-col items-center mt-8'>
-      <div className='w-screen max-w-5xl'>
+      <div className='w-screen max-w-5xl p-4'>
         <h2 className='text-xl'>
           The person behind the code: Nursultan Mamatov
         </h2>
@@ -15,7 +15,7 @@ const About = () => {
           </p>
           <p>
             My specialty is real-time systems such as games, backend systems and
-            desktop applications.
+            desktop applications but I'm capable of many things.
           </p>
 
           <div className='max-w-3xl ml-auto mr-auto mt-2'>
@@ -32,5 +32,3 @@ const About = () => {
     </div>
   )
 }
-
-export default About

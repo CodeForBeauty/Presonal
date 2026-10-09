@@ -29,6 +29,7 @@ export default async function Portfolio({
               width={1024}
               height={614}
               style={{ width: '100%', height: 'auto' }}
+              loading='eager'
             />
           )
         })}

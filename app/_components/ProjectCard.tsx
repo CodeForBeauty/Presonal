@@ -18,7 +18,8 @@ export default function ProjectCard({
           width={512}
           height={307}
           style={{ height: '50%', width: 'auto' }}
-        ></Image>
+          loading='eager'
+        />
         <div className='text-lg mt-2'>{project.title}</div>
         <div>{project.brief}</div>
         <div>{project.type}</div>
