@@ -26,7 +26,7 @@ export default async function Highlights() {
         })}
       </div>
       <a href='/projects' className='self-center'>
-        <button>See more</button>
+        <button className='bg-primary p-2 rounded-lg'>See more</button>
       </a>
     </div>
   )

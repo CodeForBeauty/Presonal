@@ -35,5 +35,5 @@ export async function getPortfolios() {
 
   const portfolios: PortfolioType[] = data.data.portfolios
 
-  return portfolios
+  return portfolios.reverse()
 }

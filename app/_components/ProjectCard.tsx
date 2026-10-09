@@ -10,8 +10,8 @@ export default function ProjectCard({
   subfolder: string
 }) {
   return (
-    <Link href={`/${subfolder}/${project.id}`} className='h-fit'>
-      <div className='bg-primary-bg p-3 rounded-lg shadow-md'>
+    <Link href={`/${subfolder}/${project.id}`} className='h-fit animate-in'>
+      <div className='bg-primary-bg p-3 rounded-lg shadow-md hover:shadow-xl hover:outline-2 transition-all hover:outline-blue-400/40 outline-transparent shadow-black-800 hover:-translate-y-1'>
         <Image
           src={project.thumbnail.url}
           alt='Project thumbnail'

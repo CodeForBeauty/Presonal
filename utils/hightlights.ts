@@ -53,5 +53,5 @@ export async function getHighlights() {
 
   const highlights: HightlightType[] = data.data.highlights
 
-  return highlights
+  return highlights.reverse()
 }

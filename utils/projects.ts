@@ -36,5 +36,5 @@ export async function getProjects() {
 
   const projects: ProjectType[] = data.data.projects
 
-  return projects
+  return projects.reverse()
 }
