@@ -1,8 +1,32 @@
 import { ProjectType } from '@/types/project'
 import { getProjects } from '@/utils/projects'
+import { Metadata } from 'next'
 import Image from 'next/image'
 
-export default async function Portfolio({
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>
+}): Promise<Metadata> {
+  const { id } = await params
+
+  const projects: ProjectType[] = await getProjects()
+
+  const project = projects.find((p) => p.id == id)
+
+  if (project == undefined) {
+    return {
+      title: 'Project not found',
+    }
+  }
+
+  return {
+    title: `${project.title} | Nursultan Mamatov`,
+    description: project.brief,
+  }
+}
+
+export default async function Projects({
   params,
 }: {
   params: Promise<{ id: string }>

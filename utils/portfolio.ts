@@ -28,6 +28,7 @@ export async function getPortfolios() {
       }
     `,
       cache: 'force-cache',
+      next: { revalidate: 60 * 60 * 2 }, // 2 hours
     }),
   })
 

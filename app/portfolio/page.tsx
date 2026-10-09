@@ -1,6 +1,12 @@
 import { PortfolioType } from '@/types/portfolio'
 import { getPortfolios } from '@/utils/portfolio'
 import ProjectCard from '../_components/ProjectCard'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Portfolio - Nursultan Mamatov',
+  description: 'My personal projects showcasing my technical abilities.',
+}
 
 export default async function Portfolio() {
   const portfolios: PortfolioType[] = await getPortfolios()

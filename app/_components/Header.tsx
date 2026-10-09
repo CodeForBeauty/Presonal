@@ -16,6 +16,9 @@ export default function Header() {
         <Link href='/services'>
           <button>Services</button>
         </Link>
+        <Link href='/about'>
+          <button>About</button>
+        </Link>
       </nav>
     </header>
   )

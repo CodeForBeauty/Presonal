@@ -1,6 +1,12 @@
 import { ProjectType } from '@/types/project'
 import { getProjects } from '@/utils/projects'
 import ProjectCard from '../_components/ProjectCard'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Client Projects - Nursultan Mamatov',
+  description: 'Client projects involving my help.',
+}
 
 export default async function Projects() {
   const projects: ProjectType[] = await getProjects()

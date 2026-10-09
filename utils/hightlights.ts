@@ -46,6 +46,7 @@ export async function getHighlights() {
       }
     `,
       cache: 'force-cache',
+      next: { revalidate: 60 * 60 * 2 }, // 2 hours
     }),
   })
 

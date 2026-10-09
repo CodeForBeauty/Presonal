@@ -1,4 +1,11 @@
 import { services, ServiceType } from '@/utils/services'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Freelance Software Engineering Services - Nursultan Mamatov',
+  description:
+    'Freelance services for clients. Contact me for any kind of work.',
+}
 
 function Service({ service }: { service: ServiceType }) {
   return (
