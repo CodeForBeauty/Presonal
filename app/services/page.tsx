@@ -2,7 +2,7 @@ import { services, ServiceType } from '@/utils/services'
 
 function Service({ service }: { service: ServiceType }) {
   return (
-    <div className='bg-gray-600 p-4'>
+    <div className='bg-primary-bg rounded-md p-4'>
       <div>{service.title}</div>
       <div>Deliverable: {service.deliverable}</div>
       <div>Budget: {service.price}</div>

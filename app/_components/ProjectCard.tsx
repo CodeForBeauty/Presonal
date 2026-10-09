@@ -11,7 +11,7 @@ export default function ProjectCard({
 }) {
   return (
     <Link href={`/${subfolder}/${project.id}`} className='h-fit'>
-      <div className='bg-gray-800 p-3 rounded-xl'>
+      <div className='bg-primary-bg p-3 rounded-lg shadow-md'>
         <Image
           src={project.thumbnail.url}
           alt='Project thumbnail'

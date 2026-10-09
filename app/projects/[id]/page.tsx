@@ -19,7 +19,7 @@ export default async function Portfolio({
 
   return (
     <div className='flex p-8 w-[stretch] gap-8 wrap-anywhere'>
-      <div className='flex flex-col w-[40vw] gap-4'>
+      <div className='flex flex-col bg-tertiary-bg p-2 rounded-md w-[40vw] gap-4'>
         {project.images.map((i) => {
           return (
             <Image
@@ -33,21 +33,22 @@ export default async function Portfolio({
           )
         })}
       </div>
-      <div className='bg-gray-800 w-[50vw] p-4 rounded-lg'>
+      <div className='bg-primary-bg w-[50vw] p-4 rounded-lg'>
         <h1 className='text-xl'>{project.title}</h1>
         <p className='mt-2'>{project.description}</p>
-        <div className='flex flex-wrap gap-4 mt-4'>
+        <p className='text-lg mt-4'>Skills</p>
+        <div className='flex flex-wrap gap-4 mt-2'>
           {project.skills.map((skill, id) => {
             return (
-              <p key={id} className='bg-gray-500 p-1'>
+              <p key={id} className='bg-primary text-text-inv p-1'>
                 {skill}
               </p>
             )
           })}
         </div>
         {project.review != undefined && project.review != '' && (
-          <div>
-            <h3>Client review</h3>
+          <div className='mt-4'>
+            <h3 className='text-lg'>Client review</h3>
             <p>{project.review}</p>
           </div>
         )}
@@ -57,7 +58,12 @@ export default async function Portfolio({
             <div className='flex flex-col gap-4 mt-2'>
               {project.links.map((link) => {
                 return (
-                  <a className='w-fit' href={link} key={link} target='_blank'>
+                  <a
+                    className='w-fit text-primary underline'
+                    href={link}
+                    key={link}
+                    target='_blank'
+                  >
                     {link.replace('https://', '')}
                   </a>
                 )
