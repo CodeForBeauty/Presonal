@@ -2,15 +2,17 @@
 
 
 ## Overview
-This project is the source code for my personal website. The project is made with React and Bootstrap.
+This project is the source code for my personal website. The project is made with Next.js, Hygraph and is deployed to Vercel.
+
+Website is aimed to have as little dependencies as possible with entirety of the website components being server components.
 
 ## Development stack
 
-Vite
+Next.js
 
 React
 
-Bootstrap
+Tailwind
 
 ## How to run
 Clone the repo
@@ -28,4 +30,3 @@ Start development server
 ```bash
 npm run dev
 ```
-The server will start on the localhost on port 5173. Can be opened in browser with: http://localhost:5173/
